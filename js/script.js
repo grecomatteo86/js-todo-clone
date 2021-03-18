@@ -4,7 +4,7 @@
 clone, prepend e append */
 
 
-function clonePrependAppend (clone,listatoTesto, tag) {
+function clonePrependAppend (clone,listatoTesto,tag) {
 
   var template = $(clone).clone();
 
