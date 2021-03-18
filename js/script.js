@@ -21,3 +21,10 @@ for ( var i = 0; i < bucketList.length; i++) {
   $('.bucket_list').append(template);
 
 }
+
+/* 7. Rendo la X operativa */
+$('.bucket_list_delete').click(
+  function(){
+    $(this).parent().remove();
+  }
+);
