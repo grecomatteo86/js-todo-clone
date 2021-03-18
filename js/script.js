@@ -9,3 +9,6 @@ var bucketList = [
   'Tatuarmi la madonna sulla schiena',
 
 ];
+
+/* 3. Clono il template */
+var template = $('.template li').clone();
