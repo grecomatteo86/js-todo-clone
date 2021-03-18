@@ -28,3 +28,10 @@ $('.bucket_list_delete').click(
     $(this).parent().remove();
   }
 );
+
+/* 9. Con '#aggiungi' rimango in ascolto di tutto
+quello che viene scritto nel campo input */
+$('#aggiungi').keydown(
+  function(event){
+    console.log(event.which);
+});
