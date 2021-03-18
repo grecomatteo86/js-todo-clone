@@ -1,7 +1,7 @@
 /* Creare una todo list usando un template */
 
-/* 1. Definisco una lista di cose da fare con un array */
 
+/* 1. Definisco un listato attraverso un array */
 var bucketList = [
 
   'Inventare un profumo',
@@ -10,5 +10,13 @@ var bucketList = [
 
 ];
 
-/* 3. Clono il template */
-var template = $('.template li').clone();
+/* 4. Per aggiungere il listato devo prima ciclare il mio array con un ciclo for */
+for ( var i = 0; i < bucketList.length; i++) {
+
+  /* 3. Clono il template */
+  var template = $('.template li').clone();
+  /* 5. Aggiungo il listato al template */
+  template.prepend(bucketList[i]);
+  
+
+}
