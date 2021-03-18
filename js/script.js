@@ -53,3 +53,10 @@ $('#aggiungi').keydown(
     }
 
 });
+
+/* 16. Comando che permette al document di rimanere in ascolto di un eventuale
+evento click su bucket_list_delete che mi andrà a rimuovere il <li>
+aggiunto dall'utente */
+$(document).on('click','.bucket_list_delete',function(){
+  $(this).parent().remove();
+})
