@@ -33,5 +33,17 @@ $('.bucket_list_delete').click(
 quello che viene scritto nel campo input */
 $('#aggiungi').keydown(
   function(event){
-    console.log(event.which);
+    /* 10. Eseguo il controllo: se l'utente pigia invio
+    allora mi prendo il valore di quello che ha inserito
+    e me lo salvo in una variabile */
+    if (event.which == 13){
+      var testo = $(this).val();
+      /* 11. Clono il template */
+      var template = $('.template li').clone();
+      /* 12. Aggiungo il valore della variabile al template */
+      template.prepend(testo);
+      /* 13. Immetto il template nell'html */
+      $('.bucket_list').append(template);
+    }
+
 });
