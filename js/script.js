@@ -1,5 +1,19 @@
 /* Creare una todo list usando un template */
 
+/* 0. Creo una funzione che mi fa il
+clone, prepend e append */
+
+
+function clonePrependAppend (clone,listatoTesto, tag) {
+
+  var template = $(clone).clone();
+
+  template.prepend(listatoTesto);
+
+  $(tag).append(template);
+
+}
+
 
 /* 1. Definisco un listato attraverso un array */
 var bucketList = [
@@ -13,12 +27,15 @@ var bucketList = [
 /* 4. Per aggiungere il listato devo prima ciclare il mio array con un ciclo for */
 for ( var i = 0; i < bucketList.length; i++) {
 
-  /* 3. Clono il template */
+  /* 3. Clono il template
   var template = $('.template li').clone();
-  /* 5. Aggiungo il listato al template */
+  5. Aggiungo il listato al template
   template.prepend(bucketList[i]);
-  /* 6. Prendo il mio template e lo metto nell'html */
-  $('.bucket_list').append(template);
+  6. Prendo il mio template e lo metto nell'html
+  $('.bucket_list').append(template); */
+
+  /* 17. Invoco la mia funzione */
+  clonePrependAppend ('.template li',bucketList[i],'.bucket_list');
 
 }
 
@@ -41,12 +58,17 @@ $('#aggiungi').keydown(
       /* 15. Controllo: se quello che inserisce l'utente
       non è testo vuoto allora lo inserisco */
       if ( testo != '') {
-        /* 11. Clono il template */
+
+        /* 11. Clono il template
         var template = $('.template li').clone();
-        /* 12. Aggiungo il valore della variabile al template */
+        12. Aggiungo il valore della variabile al template
         template.prepend(testo);
-        /* 13. Immetto il template nell'html */
-        $('.bucket_list').append(template);
+        13. Immetto il template nell'html
+        $('.bucket_list').append(template); */
+
+        /* 17. Invoco la mia funzione */
+        clonePrependAppend ('.template li',testo,'.bucket_list')
+
         /* 14. Ripulisco campo input una volta che l'utente preme invio */
         $(this).val('');
       }
